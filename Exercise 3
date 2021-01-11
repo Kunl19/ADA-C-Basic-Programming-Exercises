@@ -1,0 +1,36 @@
+//excercise 3
+
+//https://repl.it/@Kunl19/Area-of-a-Rectangle-Room#main.cpp
+
+
+#include <iostream>
+#include <string>
+
+
+int main() {
+  std::string width;
+  std::string length;
+  
+  std::cout << "Input Width\n";
+  //std::cin >> quote;
+  getline(std::cin, width);
+  int w = stoi(width);
+
+  std::cout << "Input Length\n";
+  //std::cin >> quote;
+  getline(std::cin, length);
+  int l = stoi(length);
+
+  std::cout << "Your room’s dimension is " << l << " by " << w << "feet, the area is:";
+
+  std::cout << "\n" << l * w << " Square foot " << "\n";
+  int metres = (l * w)/10.764;
+  std::cout << "\n" << metres << " Square metres " << "\n";
+
+
+  
+
+
+  return 0;
+
+} 
