@@ -1,0 +1,16 @@
+// exercise 4
+
+//https://repl.it/@Kunl19/EvenNumbers#main.cpp
+
+#include <iostream>
+
+int main()
+{
+    int num;
+    std::cout << "Please enter a value? ";
+    std::cin >> num;
+    if ( num % 2 == 0)
+        std::cout << num << " is an even number";
+    else
+        std::cout << num << " is and odd  number";
+}
