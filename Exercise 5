@@ -1,0 +1,30 @@
+//Excercise 5
+
+//https://repl.it/@Kunl19/RetirementCalculator#main.cpp
+
+#include <iostream>
+#include <string>
+
+int main() {
+
+  std :: string age;
+  std :: string retire;
+  int year = 2021;
+
+  std::cout << "What is your current age: ";
+  getline(std::cin, age);
+  int cAge = stoi(age);
+
+  std::cout << "What is your retirement age: ";
+  getline(std::cin, retire);
+  int rAge = stoi(retire);
+
+  int ageDifference = rAge - cAge;
+  int retirementYear = year + ageDifference;
+
+  std::cout << "The current year is: " <<  year << " can retire in "<< retirementYear << "; you have "<< ageDifference <<" years remaining";
+
+
+  return 0;
+
+}
