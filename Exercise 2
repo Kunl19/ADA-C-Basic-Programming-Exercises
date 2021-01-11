@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+
+//https://repl.it/@Kunl19/Fahrenheit-Centigrade-Conversion#main.cpp
+
+int main() {
+  std::string temp;
+  std::string letter;
+  std::cout << "Input Temperature\n";
+  //std::cin >> quote;
+  getline(std::cin, temp);
+  int x = stoi(temp);
+
+  std::cout << "Click C if you want to convert your temperature to Celsius or click F if you want your tempearture in Fahrenheit\n";
+
+  getline(std::cin, letter);
+
+  if(letter == "C"){
+    int centigrade = (x -32) * 5 / 9;
+    std::cout << "Your Temperature is " << centigrade << " in Centigrade/n";
+  }
+  else if(letter == "F"){
+    int fahrenheit = (x * 9 / 5) + 32;
+    std::cout << "Your Temperature is " << fahrenheit << " in Fahrenheit/n";
+
+  }
+  else{
+    std::cout << "Enter a correct letter";
+  }
+
+  return 0;
+
+}
