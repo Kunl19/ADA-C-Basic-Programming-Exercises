@@ -1,0 +1,85 @@
+//https://repl.it/@Kunl19/LowandLargestNumbers#main.cpp
+
+//Excercise 8
+
+https://repl.it/@Kunl19/LowandLargestNumbers#main.cpp
+
+#include<iostream>
+#include<vector>
+#include <algorithm>
+using namespace std;
+
+#define min(a,b) a<b?a:b
+#define max(a,b) a>b?a:b
+
+
+int findMinimum(vector<char>&a, int n)
+  {
+    int mn = a[0]; 
+
+    for (int i = 0; i < n; i++)
+    {
+        mn = min(mn, a[i]); 
+    }
+    return mn;
+  }
+
+  int findMaximum(vector<char>&a, int n)
+  {
+    int mx = a[0]; 
+
+    for (int i = 0; i < n; i++)
+    {
+        mx = max(mx, a[i]); 
+    }
+    return mx;
+  }
+
+int main() {
+
+  char input;
+
+  vector <char> numbers;
+
+  cout << "Enter Q to finsih or a valid number: \n";
+  cin >> input;
+  
+  while(input != 'Q' || input != 'q'){
+
+    if(input == 'Q' || input == 'q'){
+      break;
+    }
+
+    else if(!(input == '-' || std::isdigit(input))){
+        cout << "Enter a valid number: ";
+        cin >> input;
+        int num = input;
+        
+    }
+    else{
+      cin >> input;
+      int num = input;
+      numbers.push_back(num);
+
+    }
+  }
+
+  cout << "Q is pressed: Program is ended \n";
+
+  int ArrayLength = numbers.size();
+
+  int max = findMinimum(numbers, ArrayLength);
+  int min = findMaximum(numbers,ArrayLength);
+
+  cout << "The largest value entered: " << max  <<"\n";
+
+  cout << "The smallest value entered: " << max << "\n";
+
+
+
+  cout << "Total number of values entered: " << numbers.size();
+
+  //cout << numbers.size();
+  
+  return 0;
+}
