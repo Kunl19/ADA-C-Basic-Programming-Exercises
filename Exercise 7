@@ -13,7 +13,7 @@ int main() {
 
   char input;
 
-  vector <char> numbers;
+  vector <int> numbers;
 
   cout << "Enter Q to finsih or a valid number: \n";
   cin >> input;
@@ -24,22 +24,45 @@ int main() {
       break;
     }
 
-    else if(!isdigit(input)){
+    else if(!(input == '-' || std::isdigit(input))){
         cout << "Enter a valid number: ";
         cin >> input;
-        numbers.push_back(input);
+        int num = input;
+        
     }
     else{
       cin >> input;
-      numbers.push_back(input);
+      int num = input;
+      numbers.push_back(num);
 
     }
   }
 
-  cout << "Q is pressed: Program is ended \n";
+
+  cout << "Q is pressed: The program has ended \n";
 
   cout << "Total number of values entered: " << numbers.size();
-  
+
+  int pos=0, neg=0, zer=0, i;
+    
+    for(i=0; i<numbers.size(); i++)
+    {
+        if(numbers[i]>0)
+            pos++;
+        else if(numbers[i]==0)
+            zer++;
+        else
+            neg++;
+    }
+    cout<<"\nFrequency of Positive Numbers: "<<pos;
+
+    cout<<"\nFrequency of Zero: "<<zer;
+
+    cout<<"\nFrequency of Negative Numbers: "<<neg;
+    
+    cout<<endl;
+
+    return 0;
 
   
 
