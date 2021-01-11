@@ -38,11 +38,9 @@ int main() {
 
   cout << "Q is pressed: Program is ended \n";
 
-  cout << "Total number of values entered: " << sizeof(numbers)/sizeof(numbers[0]);
+  cout << "Total number of values entered: " << numbers.size();
   
 
   
-
-
 
 }
