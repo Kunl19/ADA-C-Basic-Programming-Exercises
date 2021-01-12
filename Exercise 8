@@ -1,5 +1,8 @@
 //https://repl.it/@Kunl19/LowandLargestNumbers#main.cpp
 
+//Had issues when coverting char to int causing number of chars to be counted not intergers - line 54
+
+
 //Excercise 8
 
 https://repl.it/@Kunl19/LowandLargestNumbers#main.cpp
