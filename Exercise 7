@@ -2,6 +2,9 @@
 
 //https://repl.it/@Kunl19/ZeroPostiveandNegativeCounter#main.cpp
 
+//Had issues when coverting char to int causing number of chars to be counted not intergers - line 27
+
+
 #include <iostream>
 #include <stdio.h>
 #include <string>
@@ -64,6 +67,5 @@ int main() {
 
     return 0;
 
-  
 
 }
